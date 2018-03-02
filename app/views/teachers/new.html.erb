@@ -1,12 +1,12 @@
 <%= form_tag teachers_path do %>
   <%= label_tag(:full_name, "Full name") %>
-  <%= text_field_tag(:full_name) %>
+  <%= text_field_tag(:full_name, nil, placeholder: @placeholder_name) %>
 
   <%= label_tag(:course_name, "Course name") %>
   <%= text_field_tag(:course_name, nil, placeholder: @placeholder_course) %>
 
   <%= label_tag(:grade_level, "Grade level") %>
-  <%= text_field_tag(:grade_level) %>
+  <%= text_field_tag(:grade_level, nil, placeholder: @placeholder_grade) %>
 
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 

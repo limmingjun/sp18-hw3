@@ -7,10 +7,15 @@ class TeachersController < ApplicationController
 
   def create
     # Hint: params??
-    create_instance = Create.new params[:full_name], params[:course_name], params[:grade_level]
-    @full_name = create_instance.full_name
-    @course = create_instance.course_name
-    @grade_level = create_instance.grade_level
+    #params is a global dictionary? where you can draw the inputs that have been given.
+    @full_name = params[:full_name]
+    @course = params[:course_name]
+    @grade_level = params[:grade_level]
+    ### Old code below is unneccessary.
+    ## create_instance = Create.new params[:full_name], params[:course_name], params[:grade_level]
+    ## @full_name = create_instance.full_name
+    ## @course = create_instance.course_name
+    ## @grade_level = create_instance.grade_level
     # YOUR CODE HERE
 
 
